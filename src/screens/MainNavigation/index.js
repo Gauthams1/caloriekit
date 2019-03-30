@@ -21,15 +21,6 @@ const TabRoutes = {
       }),
     },
   },
-  Targets: {
-    screen: TargetsTab,
-    navigationOptions: {
-      tabBar: () => ({
-        label: 'GI Target',
-        icon: ({ focused }) => (<TabIcon type="target" isSelected={focused} />)
-      }),
-    },
-  },
   FoodList: {
     screen: FoodListTab,
     navigationOptions: {
@@ -71,7 +62,7 @@ const TabConfig = {
   animationEnabled: true,
   swipeEnabled: false,
   lazyLoad: true,
-  order: ['FoodList', 'Favourites', 'Targets', 'Tracker'],
+  order: ['FoodList', 'Favourites', 'Tracker'],
   tabBarOptions: {
     activeTintColor: colors.textOnMain,
     labelStyle: {

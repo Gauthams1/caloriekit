@@ -4,6 +4,7 @@ import _ from 'lodash';
 import { NAV_STYLES } from '../config';
 
 import TimeLine from '../components/TimeLine';
+// import console = require('console');
 
 class TrackerScreen extends Component {
   static navigationOptions = {
@@ -18,9 +19,11 @@ class TrackerScreen extends Component {
     this.throttledGoToWeek = _.throttle(this.goToWeek, 1000, { trailing: false });
   }
   goToWeek = (start) => {
+    // alert(start)
     this.props.navigation.navigate('WeekView', { start });
   }
   render() {
+    console.log(this.throttledGoToWeek())
     return <TimeLine showWeek={this.throttledGoToWeek} />;
   }
 }

@@ -20,7 +20,7 @@ class WeekViewScreen extends Component {
     }
   }
   showMeal = (mealProps) => {
-    this.props.navigation.navigate('Meal', mealProps);
+    // this.props.navigation.navigate('Meal', mealProps);
   }
   render() {
     const { start } = this.props.navigation.state.params;
